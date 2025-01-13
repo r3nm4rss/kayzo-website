@@ -36,12 +36,12 @@ export function Footer() {
           <div className="text-center text-sm text-gray-400">
             <p className="mb-2">© 2025 Kayzo. All rights reserved.</p>
             <a 
-              href="https://kayzo.github.io" 
+              href="https://kayzo-web.netlify.app/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-blue-500 hover:text-blue-400 transition-colors"
             >
-              Made by Casper
+              Made by r3nm4rss
             </a>
           </div>
         </div>
