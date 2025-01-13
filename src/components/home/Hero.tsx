@@ -15,7 +15,7 @@ export function Hero() {
             A powerful Discord bot that brings advanced fortnite features and fortnite locker pictures.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="#" className="btn-primary">
+            <a href="https://discord.com/oauth2/authorize?client_id=1327480147439521804&permissions=2147797056&integration_type=0&scope=bot" className="btn-primary">
               Add to Discord
             </a>
             <Link to="/commands" className="btn-secondary">
