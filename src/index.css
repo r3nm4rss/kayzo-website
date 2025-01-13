@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A];
+  }
+}
+
+.bg-mesh {
+  background-image: radial-gradient(at 40% 40%, rgb(23, 23, 23) 0px, transparent 50%),
+                    radial-gradient(at 90% 10%, rgb(17, 24, 39) 0px, transparent 50%),
+                    radial-gradient(at 50% 95%, rgb(17, 24, 39) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 
+         text-white font-medium px-6 py-3 rounded-lg transition-all duration-200
+         hover:shadow-lg hover:shadow-blue-500/20;
+}
+
+.btn-secondary {
+  @apply bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10
+         text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.1);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(59, 130, 246, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlight-command {
+  animation: highlight 2s ease-out;
+}
+
+.feature-card {
+  @apply glass p-6 rounded-lg transition-all duration-500 hover:scale-105 hover:bg-white/10;
+  animation: float 6s ease-in-out infinite;
+}
+
+.feature-card:hover .feature-icon {
+  @apply text-blue-400;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-icon {
+  @apply transition-all duration-300;
+}
+
+.stat-card {
+  @apply glass p-8 rounded-lg transition-all duration-500;
+  animation: float 6s ease-in-out infinite;
+}
+
+.stat-card:hover {
+  @apply transform -translate-y-2;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+}
